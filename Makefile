@@ -118,11 +118,12 @@ twigcs: ## Twigcs (https://github.com/friendsoftwig/twigcs)
 ##
 ## —— ✨ Tests ——
 .PHONY: tests
-tests:
+tests: ## Execute tests
 	$(APP) vendor/bin/simple-phpunit  --colors=always --testdox
 
 
-#Others
+##
+## —— ✨ Others ——
 .PHONY: help
 help: ## List of commands
 	@grep -E '(^[a-z0-9A-Z_-]+:.*?##.*$$)|(^##)' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}' | sed -e 's/\[32m##/[33m/'
