@@ -17,11 +17,11 @@ Now you can visit https://app.local (or personal domain if you change `SERVER_NA
 
 ### QA tools: 
 
-- PHP_CodeSniffer (3.7)
-- PHP-CS-Fixer : (3.37)
-- PHPStan : (1.9)
-- PHP Insights : (2.8)
-- Twigcs : (6.2)
+- PHP_CodeSniffer (3.7.2)
+- PHP-CS-Fixer : (3.37.0)
+- PHPStan : (1.10.39)
+- PHP Insights : (2.9.0)
+- Twigcs : (6.2.0)
 - YML Linter
 - Twig Linter 
 - Service Container Linter

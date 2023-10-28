@@ -21,6 +21,7 @@
         "friends-of-behat/mink-browserkit-driver": "^1.6",
         "friends-of-behat/mink-extension": "^2.7",
         "friends-of-behat/symfony-extension": "^2.4",
+        "friendsofphp/php-cs-fixer": "^3.37",
         "friendsoftwig/twigcs": "^6.2",
         "nunomaduro/phpinsights": "^2.8",
         "phpstan/extension-installer": "^1.2",
