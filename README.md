@@ -2,10 +2,10 @@
 
 An up to date clean Symfony based on docker (PHP, Caddy, Postgres) with QA and tests tools 
 
-- Symfony 6.3.6
-- PHP 8.2
-- Caddy 2.7
-- Postgres 16
+- [Symfony 6.3.6](https://github.com/symfony/symfony/releases/tag/v6.3.6)
+- [PHP 8.2](https://hub.docker.com/_/php)
+- [Caddy 2.7](https://hub.docker.com/_/caddy)
+- [Postgres 16](https://hub.docker.com/_/postgres)
 
 ```
 1. git clone git@github.com:damien-louis/symfony-docker.git my-project
