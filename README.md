@@ -12,7 +12,8 @@ An up to date clean Symfony based on docker (PHP, Caddy, Postgres) with QA and t
 2. cd my-project
 3. make install
 ```
-**Enjoy \o/**
+**It's enough \o/**
+Now you can visit https://app.local (or personal domain if you change `SERVER_NAME` in `.env`/`.env.local`
 
 /!\ Don't forget to attach to your own repository : 
 ```
