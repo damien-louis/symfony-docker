@@ -120,6 +120,7 @@ twigcs: ## Twigcs (https://github.com/friendsoftwig/twigcs)
 .PHONY: tests
 tests: ## Execute tests
 	$(APP) vendor/bin/simple-phpunit  --colors=always --testdox
+	$(APP) vendor/bin/behat
 
 
 ##
