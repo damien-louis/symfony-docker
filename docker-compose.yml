@@ -27,7 +27,7 @@ services:
       - "443:443"
 
   database:
-    image: postgres:15-alpine
+    image: postgres:16-alpine
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
