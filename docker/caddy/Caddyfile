@@ -1,0 +1,6 @@
+:443 {
+        tls /usr/local/share/ca-certificates/{$SERVER_NAME}.pem /usr/local/share/ca-certificates/{$SERVER_NAME}-key.pem
+        root * /var/www/html/public
+        php_fastcgi php:9000
+        file_server
+}
