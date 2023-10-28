@@ -12,17 +12,17 @@ An up to date clean Symfony based on docker (PHP, Caddy, Postgres) with QA and t
 2. cd my-project
 3. make install
 ```
-Enjoy \o/
+**Enjoy \o/**
 
-/!\ Don't forget to attach to your own repository
+/!\ Don't forget to attach to your own repository : 
 ```
 1. rm -rf .git
 2. git init
 3. git remote add origin <your repo>
-4. git checkout -b main
+4. git checkout -b first-commit
 5. git add .
 6. git commit -m "First commit"
-7. git push origin main
+7. git push origin first-commit
 ```
 
 Execute `make` to list commands (`make qa`, `make tests`...)
