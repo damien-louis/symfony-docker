@@ -64,7 +64,7 @@ vendor: ## Execute 'composer install'
 ## —— ✨ Code Quality ——
 .PHONY: qa
 qa: ## Run all code quality checks
-qa: lint-yaml lint-twig twigcs lint-container phpdd phpcs phpmnd php-cs-fixer phpstan phpinsights
+qa: lint-yaml lint-twig twigcs lint-container phpcs php-cs-fixer phpstan phpinsights
 
 .PHONY: qa-fix
 qa-fix: ## Run all code quality fixers
