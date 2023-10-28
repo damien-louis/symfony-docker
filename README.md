@@ -7,3 +7,4 @@
 ```
 Enjoy \o/
 
+Execute `make` to list commands (`make qa`, `make tests`...)
