@@ -15,7 +15,18 @@ An up to date clean Symfony based on docker (PHP, Caddy, Postgres) with QA and t
 **It's enough \o/**
 Now you can visit https://app.local (or personal domain if you change `SERVER_NAME` in `.env`/`.env.local`)
 
-/!\ Don't forget to attach to your own repository : 
+### QA tools: 
+
+- PHP_CodeSniffer (3.7)
+- PHP-CS-Fixer : (3.37)
+- PHPStan : (1.9)
+- PHP Insights : (2.8)
+- Twigcs : (6.2)
+- YML Linter
+- Twig Linter 
+- Service Container Linter
+
+### /!\ Don't forget to attach to your own repository: 
 ```
 1. rm -rf .git
 2. git init
