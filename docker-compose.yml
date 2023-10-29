@@ -2,7 +2,7 @@ version: "3"
 
 services:
   php:
-    build: ./docker/php/build
+    image: dmnlouis/php:8.2
     restart: unless-stopped
     volumes:
       - ./:/var/www/html
