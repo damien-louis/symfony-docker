@@ -23,7 +23,7 @@ SSL_DIR		= docker/caddy/certs
 
 .PHONY: install
 install: ## Project Installation
-install: .env.local build ssl start vendor reset-db
+install: .env.local build start vendor reset-db
 
 .PHONY: build
 build:
@@ -40,11 +40,6 @@ stop: ## Stop the project
 .PHONY: restart
 restart:  ## Restart the project
 restart: stop start
-
-.PHONY: ssl
-ssl: ## Build SSL using mkcert
-	@rm -rf $(SSL_DIR) && mkdir $(SSL_DIR) && cd $(SSL_DIR) && mkcert $(SERVER_NAME)
-	@echo "${GREEN}New SSL certificate has been created."
 
 .PHONY: reset-db
 reset-db: ## Reset database

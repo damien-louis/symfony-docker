@@ -8,7 +8,7 @@ services:
       - ./:/var/www/html
 
   caddy:
-    image: caddy:2.7-alpine
+    image: dmnlouis/caddy:2.7
     links:
       - php
     depends_on:
@@ -18,8 +18,6 @@ services:
     restart: unless-stopped
     volumes:
       - ./:/var/www/html
-      - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
-      - ./docker/caddy/certs:/usr/local/share/ca-certificates
       - caddy_data:/data
       - caddy_config:/config
     ports:
