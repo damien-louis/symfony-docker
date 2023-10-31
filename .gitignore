@@ -1,5 +1,6 @@
 .idea/
 docker/caddy/certs/
+*.sql
 
 ###> symfony/framework-bundle ###
 /.env.local

@@ -41,12 +41,6 @@ stop: ## Stop the project
 restart:  ## Restart the project
 restart: stop start
 
-.PHONY: reset-db
-reset-db: ## Reset database
-	$(CONSOLE) doctrine:database:drop --if-exists --force
-	$(CONSOLE) doctrine:database:create
-	$(CONSOLE) doctrine:schema:update --force
-
 .PHONY: php
 php: ## Open shell in PHP container
 	$(APP) sh
@@ -54,6 +48,23 @@ php: ## Open shell in PHP container
 .PHONY: vendor
 vendor: ## Execute 'composer install'
 	$(APP) composer install
+
+##
+## —— ✨ Database ——
+.PHONY: reset-db
+reset-db: ## Reset database
+	$(CONSOLE) doctrine:database:drop --if-exists --force
+	$(CONSOLE) doctrine:database:create
+	$(CONSOLE) doctrine:schema:update --force
+
+.PHONY: dump-db
+dump-db: ## Reset database: make dump-db file=dump.sql
+	$(DOCKER_COMPOSE) exec --interactive database pg_dump --clean --dbname=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@127.0.0.1:5432/${POSTGRES_DB} > $(file)
+
+.PHONY: restore-db
+restore-db: ## Restore database: make restore-db file=dump.sql
+	$(DOCKER_COMPOSE) exec -T --interactive database psql --dbname=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@127.0.0.1:5432/${POSTGRES_DB} < $(file)
+
 
 ##
 ## —— ✨ Code Quality ——
