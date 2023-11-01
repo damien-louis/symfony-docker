@@ -58,7 +58,7 @@ reset-db: ## Reset database
 	$(CONSOLE) doctrine:schema:update --force
 
 .PHONY: dump-db
-dump-db: ## Reset database: make dump-db file=dump.sql
+dump-db: ## Dump database: make dump-db file=dump.sql
 	$(DOCKER_COMPOSE) exec --interactive database pg_dump --clean --dbname=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@127.0.0.1:5432/${POSTGRES_DB} > $(file)
 
 .PHONY: restore-db
