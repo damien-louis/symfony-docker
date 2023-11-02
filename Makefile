@@ -6,7 +6,6 @@ DOCKER 		= docker
 DOCKER_COMPOSE 	= docker compose
 APP		= $(DOCKER_COMPOSE) exec -it php
 CONSOLE 	= $(APP) bin/console
-SSL_DIR		= docker/caddy/certs
 
 .PHONY: install
 install: ## Project Installation
