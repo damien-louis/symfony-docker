@@ -1,5 +1,4 @@
 include .env .env.local
-export
 
 .DEFAULT_GOAL := help
 
@@ -9,21 +8,9 @@ APP		= $(DOCKER_COMPOSE) exec -it php
 CONSOLE 	= $(APP) bin/console
 SSL_DIR		= docker/caddy/certs
 
-.env.local: .env
-	@if [ -f .env.local ]; then \
-		echo '${YELLOW}The ".env" has changed. You may want to update your copy ".env.local" accordingly (this message will only appear once).'; \
-		touch .env.local; \
-		exit 1; \
-	else \
-		cp .env .env.local; \
-		echo "cp .env .env.local"; \
-		echo "${YELLOW}Modify it according to your needs and rerun the command."; \
-		exit 1; \
-	fi
-
 .PHONY: install
 install: ## Project Installation
-install: .env.local build start vendor reset-db
+install: build start vendor reset-db
 
 .PHONY: build
 build:
@@ -40,6 +27,10 @@ stop: ## Stop the project
 .PHONY: restart
 restart:  ## Restart the project
 restart: stop start
+
+.PHONY: reinstall
+reinstall:  ## Reinstall the project
+reinstall: stop install
 
 .PHONY: php
 php: ## Open shell in PHP container
