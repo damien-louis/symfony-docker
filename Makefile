@@ -7,9 +7,15 @@ DOCKER_COMPOSE 	= docker compose
 APP		= $(DOCKER_COMPOSE) exec -it php
 CONSOLE 	= $(APP) bin/console
 
+.env.local: .env
+	@if [ ! -f .env.local ]; then \
+		cp .env .env.local; \
+		echo ".env.local is missing, file was copied from .env"; \
+	fi
+
 .PHONY: install
 install: ## Project Installation
-install: build start vendor reset-db
+install: .env.local build start vendor reset-db
 
 .PHONY: build
 build:
