@@ -1,0 +1,19 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@main
+      - name: Build application
+        run: make install
+      - name: QA
+        run: make qa-fix
+      - name: Tests
+        run: make tests

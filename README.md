@@ -38,3 +38,5 @@ Now you can visit https://app.local (or personal domain if you change `SERVER_NA
 ```
 
 Execute `make` to list commands (`make qa`, `make tests`...)
+
+You can remove `.github` folder if you don't use Github
