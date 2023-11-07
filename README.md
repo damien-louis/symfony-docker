@@ -18,7 +18,7 @@ Now you can visit https://app.local (or personal domain if you change `SERVER_NA
 ### QA tools: 
 
 - PHP_CodeSniffer [3.7.2](https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.7.2)
-- PHP-CS-Fixer [3.37.1](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/tag/v3.37.1)
+- PHP-CS-Fixer [3.38.0](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/tag/v3.38.0)
 - PHPStan [1.10.41](https://github.com/phpstan/phpstan/releases/tag/1.10.41)
 - PHP Insights [2.9.0](https://github.com/nunomaduro/phpinsights/releases/tag/v2.9.0)
 - Twigcs [6.2.0](https://github.com/friendsoftwig/twigcs/releases/tag/6.2.0)
