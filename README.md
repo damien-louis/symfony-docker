@@ -15,6 +15,19 @@ An up to date clean Symfony based on docker (PHP, Caddy, Postgres) with QA and t
 **It's enough \o/**
 Now you can visit https://app.local (or personal domain if you change `SERVER_NAME` in `.env`/`.env.local`)
 
+### X-Debug :
+#### To use PHP with X-Debug enabled:
+1. `make stop`
+2. In `.env.local`, replace `PHP_IMAGE=` value by `php-xdebug`
+3. `make start`
+
+Or use `make restart-with-xdebug` if `sed` is installed on your machine.
+
+#### To return to PHP without X-Debug: 
+Follow same steps with putting back `php` value to `PHP_IMAGE=`
+
+Or use `make restart-without-xdebug` if `sed` is installed on your machine.
+
 ### QA tools: 
 
 - PHP_CodeSniffer [3.7.2](https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.7.2)
