@@ -4,7 +4,7 @@ include .env .env.local
 
 DOCKER 		= docker
 DOCKER_COMPOSE 	= docker compose
-APP		= $(DOCKER_COMPOSE) exec -it php
+APP		= $(DOCKER_COMPOSE) exec -it ${PHP_IMAGE}
 CONSOLE 	= $(APP) bin/console
 
 .env.local: .env
@@ -19,19 +19,37 @@ install: .env.local build start vendor reset-db
 
 .PHONY: build
 build:
-	$(DOCKER_COMPOSE) up --build -d
+	$(DOCKER_COMPOSE) --profile ${PHP_IMAGE} --env-file .env.local up --build -d
 
 .PHONY: start
 start: ## Start the project
-	$(DOCKER_COMPOSE) up --remove-orphans --wait
+	$(DOCKER_COMPOSE) --profile ${PHP_IMAGE} --env-file .env.local up --remove-orphans --wait
+
+.PHONY: switch-and-start-without-php-xdebug
+witch-and-start-without-php-xdebug:
+	sed -i -e "s/\(PHP_IMAGE=\).*/\1php/" .env.local
+	$(DOCKER_COMPOSE) --profile php --env-file .env.local up --remove-orphans --wait
+
+.PHONY: witch-and-start-with-php-xdebug
+witch-and-start-with-php-xdebug:
+	sed -i -e "s/\(PHP_IMAGE=\).*/\1php-xdebug/" .env.local
+	$(DOCKER_COMPOSE) --profile php-xdebug --env-file .env.local up --remove-orphans --wait
 
 .PHONY: stop
 stop: ## Stop the project
-	$(DOCKER_COMPOSE) stop
+	$(DOCKER_COMPOSE) --profile ${PHP_IMAGE} --env-file .env.local stop
 
 .PHONY: restart
 restart:  ## Restart the project
 restart: stop start
+
+.PHONY: restart-with-xdebug
+restart-with-xdebug:  ## Restart the project with X-Debug enabled
+restart-with-xdebug: stop witch-and-start-with-php-xdebug
+
+.PHONY: restart-without-xdebug
+restart-without-xdebug:  ## Restart the project without X-Debug enabled
+restart-without-xdebug: stop witch-and-start-without-php-xdebug
 
 .PHONY: reinstall
 reinstall:  ## Reinstall the project
