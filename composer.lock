@@ -5348,16 +5348,16 @@
         },
         {
             "name": "nunomaduro/phpinsights",
-            "version": "v2.9.0",
+            "version": "v2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/phpinsights.git",
-                "reference": "52d69d895239b1e9a90d7212dffc6c7e73ec822e"
+                "reference": "e0988110b32f79a33cfcab5968a4bd426924b191"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/phpinsights/zipball/52d69d895239b1e9a90d7212dffc6c7e73ec822e",
-                "reference": "52d69d895239b1e9a90d7212dffc6c7e73ec822e",
+                "url": "https://api.github.com/repos/nunomaduro/phpinsights/zipball/e0988110b32f79a33cfcab5968a4bd426924b191",
+                "reference": "e0988110b32f79a33cfcab5968a4bd426924b191",
                 "shasum": ""
             },
             "require": {
@@ -5434,7 +5434,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nunomaduro/phpinsights/issues",
-                "source": "https://github.com/nunomaduro/phpinsights/tree/v2.9.0"
+                "source": "https://github.com/nunomaduro/phpinsights/tree/v2.10.0"
             },
             "funding": [
                 {
@@ -5450,7 +5450,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-20T15:58:50+00:00"
+            "time": "2023-11-10T03:23:41+00:00"
         },
         {
             "name": "phar-io/manifest",
