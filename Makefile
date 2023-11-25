@@ -13,6 +13,8 @@ CONSOLE 	= $(APP) bin/console
 		echo ".env.local is missing, file was copied from .env"; \
 	fi
 
+##
+## —— ✨ Docker ——
 .PHONY: install
 install: ## Project Installation
 install: .env.local build start vendor reset-db
@@ -55,6 +57,8 @@ restart-without-xdebug: stop witch-and-start-without-php-xdebug
 reinstall:  ## Reinstall the project
 reinstall: stop install
 
+##
+## —— ✨ PHP / Symfony ——
 .PHONY: php
 php: ## Open shell in PHP container
 	$(APP) sh
@@ -62,6 +66,14 @@ php: ## Open shell in PHP container
 .PHONY: vendor
 vendor: ## Execute 'composer install'
 	$(APP) composer install
+
+.PHONY: vendor-update
+vendor-update: ## Execute 'composer update'
+	$(APP) composer update
+
+.PHONY: cc
+cc: ## Execute 'cache:clear'
+	$(CONSOLE) cache:clear
 
 ##
 ## —— ✨ Database ——
@@ -103,8 +115,8 @@ lint-twig:## Lints Twig files
 .PHONY: lint-container
 lint-container: ## Lints containers
 	# Need PHP dependencies (run "make composer-install" if needed)
-	$(CONSOLE) cache:clear --env=prod
-	$(CONSOLE) lint:container --env=prod
+	$(CONSOLE) cache:clear
+	$(CONSOLE) lint:container
 
 .PHONY: phpcs
 phpcs: ## PHP_CodeSniffer (https://github.com/squizlabs/PHP_CodeSniffer)
