@@ -1,4 +1,6 @@
-# symfony-docker
+# Symfony Docker
+
+[![Build Status](https://github.com/damien-louis/symfony-docker/workflows/ci/badge.svg)](https://github.com/damien-louis/symfony-docker/actions?query=workflow%3A%22ci%22)
 
 An up to date clean Symfony based on docker (PHP, Caddy, Postgres) with QA and tests tools 
 
