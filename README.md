@@ -17,6 +17,12 @@ An up to date clean Symfony based on docker (PHP, Caddy, Postgres) with QA and t
 **It's enough \o/**
 Now you can visit https://app.local (or personal domain if you change `SERVER_NAME` in `.env`/`.env.local`)
 
+### PHP versions:
+You can change `PHP_VERSION` in `.env.local` to switch to another version.  
+Versions available on https://hub.docker.com/r/dmnlouis/php:
+- 8.2
+- 8.3 (RC)
+
 ### X-Debug :
 #### To use PHP with X-Debug enabled:
 1. `make stop`
