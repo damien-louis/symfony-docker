@@ -1,4 +1,6 @@
 {
+    "name": "damien-louis/symfony-docker",
+    "description": "An up to date clean Symfony based on docker (PHP, Caddy, Postgres) with QA and tests tools.",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
