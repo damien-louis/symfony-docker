@@ -2,14 +2,14 @@ version: "3"
 
 services:
   php:
-    image: dmnlouis/php:8.2
+    image: dmnlouis/php:${PHP_VERSION}
     profiles: ["php"]
     restart: unless-stopped
     volumes:
       - ./:/var/www/html
 
   php-xdebug:
-    image: dmnlouis/php:8.2-xdebug
+    image: dmnlouis/php:${PHP_VERSION}-xdebug
     profiles: ["php-xdebug"]
     restart: unless-stopped
     volumes:
