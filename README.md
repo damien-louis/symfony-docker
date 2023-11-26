@@ -23,7 +23,7 @@ Versions available on https://hub.docker.com/r/dmnlouis/php:
 - 8.2
 - 8.3 (RC)
 
-### X-Debug :
+### X-Debug:
 #### To use PHP with X-Debug enabled:
 1. `make stop`
 2. In `.env.local`, replace `PHP_IMAGE=` value by `php-xdebug`
