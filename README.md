@@ -5,7 +5,7 @@
 An up to date clean Symfony based on docker (PHP, Caddy, Postgres) with QA and tests tools 
 
 - [Symfony 6.3.8](https://github.com/symfony/symfony/releases/tag/v6.3.8)
-- [PHP 8.2](https://hub.docker.com/r/dmnlouis/php)
+- [PHP 8.3](https://hub.docker.com/r/dmnlouis/php)
 - [Caddy 2.7](https://hub.docker.com/r/dmnlouis/caddy)
 - [Postgres 16](https://hub.docker.com/_/postgres)
 
@@ -21,7 +21,7 @@ Now you can visit https://app.local (or personal domain if you change `SERVER_NA
 You can change `PHP_VERSION` in `.env.local` to switch to another version.  
 Versions available on https://hub.docker.com/r/dmnlouis/php:
 - 8.2
-- 8.3 (RC)
+- 8.3
 
 ### X-Debug:
 #### To use PHP with X-Debug enabled:
@@ -42,7 +42,6 @@ Or use `make restart-without-xdebug` if `sed` is installed on your machine.
 - PHP-CS-Fixer [3.40.0](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/tag/v3.40.0)
 - PHPStan [1.10.44](https://github.com/phpstan/phpstan/releases/tag/1.10.44)
 - PHP Insights [2.10.0](https://github.com/nunomaduro/phpinsights/releases/tag/v2.10.0)
-- Twigcs [6.2.0](https://github.com/friendsoftwig/twigcs/releases/tag/6.2.0)
 - YML Linter
 - Twig Linter 
 - Service Container Linter
