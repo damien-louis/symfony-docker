@@ -96,7 +96,7 @@ restore-db: ## Restore database: make restore-db file=dump.sql
 ## —— ✨ Code Quality ——
 .PHONY: qa
 qa: ## Run all code quality checks
-qa: lint-yaml lint-twig twigcs lint-container phpcs php-cs-fixer phpstan phpinsights
+qa: lint-yaml lint-twig lint-container phpcs php-cs-fixer phpstan phpinsights
 
 .PHONY: qa-fix
 qa-fix: ## Run all code quality fixers
@@ -142,18 +142,12 @@ php-cs-fixer: ## Execute php-cs-fixer in dry-run mode
 php-cs-fixer-apply: ## Execute php-cs-fixer and apply changes
 	$(APP) vendor/bin/php-cs-fixer fix --using-cache=no --verbose
 
-.PHONY: twigcs
-twigcs: ## Twigcs (https://github.com/friendsoftwig/twigcs)
-	$(APP) vendor/bin/twigcs templates --severity error --display blocking
-
-
 ##
 ## —— ✨ Tests ——
 .PHONY: tests
 tests: ## Execute tests
 	$(APP) vendor/bin/simple-phpunit  --colors=always --testdox
 	$(APP) vendor/bin/behat
-
 
 ##
 ## —— ✨ Others ——
