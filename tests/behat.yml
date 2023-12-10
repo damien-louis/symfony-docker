@@ -1,6 +1,8 @@
 default:
   suites:
     default:
+      paths:
+        features: features
       contexts:
         - App\Tests\Behat\DemoContext
 

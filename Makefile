@@ -146,8 +146,8 @@ php-cs-fixer-apply: ## Execute php-cs-fixer and apply changes
 ## —— ✨ Tests ——
 .PHONY: tests
 tests: ## Execute tests
-	$(APP) vendor/bin/simple-phpunit  --colors=always --testdox
-	$(APP) vendor/bin/behat
+	$(APP) vendor/bin/simple-phpunit --configuration ./tests/phpunit.xml.dist --colors=always --testdox
+	$(APP) vendor/bin/behat --config ./tests/behat.yml
 
 ##
 ## —— ✨ Others ——
