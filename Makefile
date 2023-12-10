@@ -120,27 +120,27 @@ lint-container: ## Lints containers
 
 .PHONY: phpcs
 phpcs: ## PHP_CodeSniffer (https://github.com/squizlabs/PHP_CodeSniffer)
-	$(APP) vendor/bin/phpcs -p -n --colors --standard=.phpcs.xml src
+	$(APP) vendor/bin/phpcs -p -n --colors --standard=./qa/.phpcs.xml src
 
 .PHONY: phpstan
 phpstan: ## Execute phpstan
-	$(APP) vendor/bin/phpstan --memory-limit=-1 analyse src
+	$(APP) vendor/bin/phpstan --memory-limit=-1 -c"./qa/phpstan.dist.neon" analyse src
 
 .PHONY: phpinsights
 phpinsights: ## PHP Insights (https://phpinsights.com)
-	$(APP) vendor/bin/phpinsights analyse --no-interaction
+	$(APP) vendor/bin/phpinsights analyse --config-path="./qa/phpinsights.php" --no-interaction
 
 .PHONY: phpinsights-fix
 phpinsights-fix: ## PHP Insights (https://phpinsights.com)
-	$(APP) vendor/bin/phpinsights analyse --no-interaction --fix
+	$(APP) vendor/bin/phpinsights analyse --config-path="./qa/phpinsights.php" --no-interaction --fix
 
 .PHONY: php-cs-fixer
 php-cs-fixer: ## Execute php-cs-fixer in dry-run mode
-	$(APP) vendor/bin/php-cs-fixer fix --using-cache=no --verbose --diff --dry-run
+	$(APP) vendor/bin/php-cs-fixer fix --config=./qa/.php-cs-fixer.dist.php --using-cache=no --verbose --diff --dry-run
 
 .PHONY: php-cs-fixer-apply
 php-cs-fixer-apply: ## Execute php-cs-fixer and apply changes
-	$(APP) vendor/bin/php-cs-fixer fix --using-cache=no --verbose
+	$(APP) vendor/bin/php-cs-fixer fix --config=./qa/.php-cs-fixer.dist.php --using-cache=no --verbose
 
 ##
 ## —— ✨ Tests ——
