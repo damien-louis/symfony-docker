@@ -41,7 +41,7 @@ Or use `make restart-without-xdebug` if `sed` is installed on your machine.
 
 - PHP_CodeSniffer [3.8.0](https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.8.0)
 - PHP-CS-Fixer [3.41.1](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/tag/v3.41.1)
-- PHPStan [1.10.49](https://github.com/phpstan/phpstan/releases/tag/1.10.49)
+- PHPStan [1.10.50](https://github.com/phpstan/phpstan/releases/tag/1.10.50)
 - PHP Insights [2.11.0](https://github.com/nunomaduro/phpinsights/releases/tag/v2.11.0)
 - YML Linter
 - Twig Linter 
