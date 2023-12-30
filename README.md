@@ -5,7 +5,7 @@
 An up to date clean Symfony based on docker (PHP, Caddy, Postgres) with QA and tests tools.  
 Behat component isn't available for Symfony 7 for the moment. Please use Symfony 6.4 if you need Behat.
 
-- [Symfony 7.0.1](https://github.com/symfony/symfony/releases/tag/v7.0.1)
+- [Symfony 7.0.2](https://github.com/symfony/symfony/releases/tag/v7.0.2)
 - [PHP 8.3](https://hub.docker.com/r/dmnlouis/php)
 - [Caddy 2.7](https://hub.docker.com/r/dmnlouis/caddy)
 - [Postgres 16](https://hub.docker.com/_/postgres)
@@ -40,7 +40,7 @@ Or use `make restart-without-xdebug` if `sed` is installed on your machine.
 ### QA tools: 
 
 - PHP_CodeSniffer [3.8.0](https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.8.0)
-- PHP-CS-Fixer [3.43.1](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/tag/v3.43.1)
+- PHP-CS-Fixer [3.45.0](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/tag/v3.45.0)
 - PHPStan [1.10.50](https://github.com/phpstan/phpstan/releases/tag/1.10.50)
 - PHP Insights [2.11.0](https://github.com/nunomaduro/phpinsights/releases/tag/v2.11.0)
 - YML Linter
