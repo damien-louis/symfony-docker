@@ -1,0 +1,11 @@
+default:
+  suites:
+    default:
+      paths:
+        features: tests/Behat/features
+      contexts:
+        - App\Tests\Behat\DemoContext
+
+  extensions:
+    FriendsOfBehat\SymfonyExtension:
+      bootstrap: 'tests/bootstrap.php'

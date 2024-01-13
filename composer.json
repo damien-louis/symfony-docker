@@ -21,6 +21,7 @@
         "symfony/yaml": "^7.0"
     },
     "require-dev": {
+        "friends-of-behat/symfony-extension": "^2.0",
         "friendsofphp/php-cs-fixer": "^3.37",
         "nunomaduro/phpinsights": "^2.8",
         "phpstan/extension-installer": "^1.2",
