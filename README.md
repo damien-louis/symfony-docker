@@ -39,9 +39,9 @@ Or use `make restart-without-xdebug` if `sed` is installed on your machine.
 
 ### QA tools: 
 
-- PHP_CodeSniffer [3.8.0](https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.8.0)
-- PHP-CS-Fixer [3.45.0](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/tag/v3.45.0)
-- PHPStan [1.10.50](https://github.com/phpstan/phpstan/releases/tag/1.10.50)
+- PHP_CodeSniffer [3.8.1](https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.8.1)
+- PHP-CS-Fixer [3.46.0](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/tag/v3.46.0)
+- PHPStan [1.10.55](https://github.com/phpstan/phpstan/releases/tag/1.10.55)
 - PHP Insights [2.11.0](https://github.com/nunomaduro/phpinsights/releases/tag/v2.11.0)
 - YML Linter
 - Twig Linter 
