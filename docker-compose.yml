@@ -1,28 +1,16 @@
-version: "3"
-
 services:
   php:
     image: dmnlouis/php:${PHP_VERSION}
-    profiles: ["php"]
     restart: unless-stopped
     volumes:
       - ./:/var/www/html
-
-  php-xdebug:
-    image: dmnlouis/php:${PHP_VERSION}-xdebug
-    profiles: ["php-xdebug"]
-    restart: unless-stopped
-    volumes:
-      - ./:/var/www/html
-    extra_hosts:
-      - host.docker.internal:host-gateway
 
   caddy:
     image: dmnlouis/caddy:2.7
     links:
-      - '${PHP_IMAGE}:php'
+      - php
     depends_on:
-      - ${PHP_IMAGE}
+      - php
     environment:
       SERVER_NAME: ${SERVER_NAME}
     restart: unless-stopped
