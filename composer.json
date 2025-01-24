@@ -6,7 +6,7 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/doctrine-bundle": "^2.10",
@@ -86,7 +86,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": true,
-            "require": "^7.0"
+            "require": "^7.2"
         }
     }
 }
