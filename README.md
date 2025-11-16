@@ -2,11 +2,10 @@
 
 [![Build Status](https://github.com/damien-louis/symfony-docker/workflows/ci/badge.svg)](https://github.com/damien-louis/symfony-docker/actions?query=workflow%3A%22ci%22)
 
-An up to date clean Symfony based on docker (PHP, Caddy, Postgres) with QA and tests tools.  
-Behat component isn't available for Symfony 7 for the moment. Please use Symfony 6.4 if you need Behat.
+An up to date clean Symfony based on docker (PHP, Caddy, Postgres) with QA and tests tools.
 
-- [Symfony 7.1](https://github.com/symfony/symfony/releases/tag/v7.1)
-- [PHP 8.3](https://hub.docker.com/r/dmnlouis/php)
+- [Symfony 7.3.7](https://github.com/symfony/symfony/releases/tag/v7.3.7)
+- [PHP 8.4](https://hub.docker.com/r/dmnlouis/php)
 - [Caddy 2.7](https://hub.docker.com/r/dmnlouis/caddy)
 - [Postgres 16](https://hub.docker.com/_/postgres)
 
@@ -23,6 +22,7 @@ You can change `PHP_VERSION` in `.env.local` to switch to another version.
 Versions available on https://hub.docker.com/r/dmnlouis/php:
 - 8.2
 - 8.3
+- 8.4
 
 ### X-Debug:
 #### To use PHP with X-Debug enabled:
@@ -39,10 +39,10 @@ Or use `make restart-without-xdebug` if `sed` is installed on your machine.
 
 ### QA tools: 
 
-- PHP_CodeSniffer [3.10.3](https://github.com/PHPCSStandards/PHP_CodeSniffer/releases/tag/3.10.3)
-- PHP-CS-Fixer [3.64.0](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/tag/v3.64.0)
-- PHPStan [1.12.7](https://github.com/phpstan/phpstan/releases/tag/1.12.7)
-- PHP Insights [2.11.0](https://github.com/nunomaduro/phpinsights/releases/tag/v2.11.0)
+- PHP_CodeSniffer [3.13,5](https://github.com/PHPCSStandards/PHP_CodeSniffer/releases/tag/3.13.5)
+- PHP-CS-Fixer [3.89.2](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/tag/v3.89.2)
+- PHPStan [1.12.32](https://github.com/phpstan/phpstan/releases/tag/1.12.32)
+- PHP Insights [2.12.3](https://github.com/nunomaduro/phpinsights/releases/tag/v2.12.3)
 - YML Linter
 - Twig Linter 
 - Service Container Linter
